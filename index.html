@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzair Mukhtar | Data Analyst Portfolio</title>
+    <meta name="description" content="Portfolio of Uzair Mukhtar, a Data Analyst specialized in Business Intelligence and Data Visualization.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        slate: {
+                            850: '#1e293b', // Custom lighter dark for cards
+                            900: '#0f172a', // Deep background
+                            950: '#020617', // Darker footer
+                        },
+                        teal: {
+                            400: '#2dd4bf', // Primary accent
+                            500: '#14b8a6', // Hover state
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom scrollbar for Webkit browsers */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+        
+        /* Utility for glass effect */
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-300 font-sans antialiased selection:bg-teal-400 selection:text-slate-900">
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <span class="text-2xl font-bold text-white tracking-tight">
+                        Uzair<span class="text-teal-400">.</span>Mukhtar
+                    </span>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-teal-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#about" class="hover:text-teal-400 text-slate-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#skills" class="hover:text-teal-400 text-slate-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Skills</a>
+                        <a href="#projects" class="hover:text-teal-400 text-slate-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+                        <a href="#certifications" class="hover:text-teal-400 text-slate-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Certifications</a>
+                        <a href="#contact" class="border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-slate-900 px-4 py-2 rounded-md text-sm font-medium transition-all">Contact</a>
+                    </div>
+                </div>
+
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none transition-colors">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:hidden hidden bg-slate-800 border-t border-slate-700" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-700">Home</a>
+                <a href="#about" class="text-slate-300 block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-700 hover:text-white">About</a>
+                <a href="#skills" class="text-slate-300 block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-700 hover:text-white">Skills</a>
+                <a href="#projects" class="text-slate-300 block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-700 hover:text-white">Projects</a>
+                <a href="#contact" class="text-teal-400 block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-teal-500/10 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-4xl mx-auto text-center opacity-0 animate-fade-in-up" style="animation-delay: 0.1s;">
+            <p class="text-teal-400 font-medium tracking-wide mb-4">DATA ANALYST</p>
+            <h1 class="text-5xl sm:text-7xl font-bold text-white tracking-tight mb-6">
+                Turning Data into <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">Actionable Insights</span>.
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-400 mb-10 leading-relaxed">
+                Hi, I'm <strong class="text-white">Uzair Mukhtar</strong>. A Data Analyst focused on business intelligence, problem-solving, and data-driven decision making.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#projects" class="px-8 py-3.5 rounded-lg bg-teal-400 text-slate-900 font-bold hover:bg-teal-500 transition-all shadow-[0_0_20px_rgba(45,212,191,0.3)]">
+                    View Projects
+                </a>
+                <a href="#contact" class="px-8 py-3.5 rounded-lg border border-slate-600 text-white font-medium hover:border-teal-400 hover:text-teal-400 transition-all">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-slate-850/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-white mb-6">About Me</h2>
+                <p class="text-lg text-slate-400 leading-relaxed">
+                    I am a passionate <span class="text-teal-400">Data Analyst</span> dedicated to uncovering trends and translating complex datasets into clear, strategic narratives. With a strong foundation in statistical analysis and visualization, I help businesses make informed decisions by transforming raw data into meaningful intelligence. My goal is to bridge the gap between numbers and business strategy.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-white mb-10 text-center">Technical Arsenal</h2>
+            
+            <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+                <span class="px-6 py-3 bg-slate-800 rounded-full border border-slate-700 text-teal-400 font-medium hover:border-teal-400 hover:bg-slate-700 transition-all cursor-default">
+                    <i class="fab fa-python mr-2"></i>Python
+                </span>
+                <span class="px-6 py-3 bg-slate-800 rounded-full border border-slate-700 text-blue-400 font-medium hover:border-blue-400 hover:bg-slate-700 transition-all cursor-default">
+                    <i class="fas fa-database mr-2"></i>SQL
+                </span>
+                <span class="px-6 py-3 bg-slate-800 rounded-full border border-slate-700 text-blue-300 font-medium hover:border-blue-300 hover:bg-slate-700 transition-all cursor-default">
+                    R Language
+                </span>
+
+                <span class="px-6 py-3 bg-slate-800 rounded-full border border-slate-700 text-yellow-500 font-medium hover:border-yellow-500 hover:bg-slate-700 transition-all cursor-default">
+                    <i class="fas fa-chart-bar mr-2"></i>Power BI
+                </span>
+                <span class="px-6 py-3 bg-slate-800 rounded-full border border-slate-700 text-indigo-400 font-medium hover:border-indigo-400 hover:bg-slate-700 transition-all cursor-default">
+                    Tableau
+                </span>
+                <span class="px-6 py-3 bg-slate-800 rounded-full border border-slate-700 text-green-500 font-medium hover:border-green-500 hover:bg-slate-700 transition-all cursor-default">
+                    <i class="fas fa-table mr-2"></i>Excel
+                </span>
+
+                <span class="px-6 py-3 bg-slate-800 rounded-full border border-slate-700 text-slate-300 font-medium hover:border-slate-500 hover:bg-slate-700 transition-all cursor-default">
+                    Data Visualization
+                </span>
+                <span class="px-6 py-3 bg-slate-800 rounded-full border border-slate-700 text-slate-300 font-medium hover:border-slate-500 hover:bg-slate-700 transition-all cursor-default">
+                    Business Intelligence
+                </span>
+                <span class="px-6 py-3 bg-slate-800 rounded-full border border-slate-700 text-slate-300 font-medium hover:border-slate-500 hover:bg-slate-700 transition-all cursor-default">
+                    Data Cleaning
+                </span>
+                <span class="px-6 py-3 bg-slate-800 rounded-full border border-slate-700 text-slate-300 font-medium hover:border-slate-500 hover:bg-slate-700 transition-all cursor-default">
+                    Analytical Thinking
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 bg-slate-850/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white">Featured Projects</h2>
+                <p class="text-slate-400 mt-2">Real-world data problems solved with code and logic.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="group bg-slate-800 rounded-xl p-8 border border-slate-700 hover:border-teal-500/50 hover:shadow-lg hover:shadow-teal-500/10 transition-all duration-300 hover:-translate-y-1">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-teal-500/10 rounded-lg text-teal-400">
+                            <i class="fas fa-chart-line text-2xl"></i>
+                        </div>
+                        <a href="#" class="text-slate-500 hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-teal-400 transition-colors">Business Intelligence Dashboard</h3>
+                    <p class="text-slate-400 mb-6 text-sm leading-relaxed">
+                        Analyzed the Superstore dataset to track sales trends, profit margins, and regional performance. Created an interactive dashboard enabling stakeholders to make strategic, data-driven decisions.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-slate-700 text-teal-300">Tableau</span>
+                        <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-slate-700 text-teal-300">Data Vis</span>
+                        <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-slate-700 text-teal-300">Analysis</span>
+                    </div>
+                </div>
+                <div class="group bg-slate-800 rounded-xl p-8 border border-slate-700 hover:border-teal-500/50 hover:shadow-lg hover:shadow-teal-500/10 transition-all duration-300 hover:-translate-y-1">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-blue-500/10 rounded-lg text-blue-400">
+                            <i class="fas fa-bicycle text-2xl"></i>
+                        </div>
+                        <a href="#" class="text-slate-500 hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">Cyclistic Case Study</h3>
+                    <p class="text-slate-400 mb-6 text-sm leading-relaxed">
+                        <strong>Google Data Analytics Capstone:</strong> Analyzed behavioral differences between 'Casual Riders' and 'Annual Members'. Identified that members generate higher ROI and recommended targeted marketing strategies to drive conversions.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-slate-700 text-blue-300">R Language</span>
+                        <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-slate-700 text-blue-300">Case Study</span>
+                        <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-slate-700 text-blue-300">Strategy</span>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-white mb-10 text-center">Certifications</h2>
+            
+            <div class="space-y-4">
+                <div class="flex items-center p-6 bg-slate-800 rounded-lg border border-slate-700 hover:border-teal-400/50 transition-colors">
+                    <div class="flex-shrink-0 h-12 w-12 bg-white rounded-full flex items-center justify-center">
+                        <span class="text-2xl font-bold text-slate-800">G</span>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-bold text-white">Google Data Analytics Professional Certificate</h3>
+                        <p class="text-teal-400 text-sm">Coursera • Google</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center p-6 bg-slate-800 rounded-lg border border-slate-700 hover:border-teal-400/50 transition-colors">
+                    <div class="flex-shrink-0 h-12 w-12 bg-slate-700 rounded-full flex items-center justify-center text-teal-400">
+                        <i class="fas fa-code text-xl"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-lg font-bold text-white">Data Science Course</h3>
+                        <p class="text-slate-400 text-sm">CodeWithHarry</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Get In Touch</h2>
+            <p class="text-slate-400 mb-8">
+                Have a data problem that needs solving? Open to opportunities and collaborations.
+            </p>
+
+            <form class="space-y-4 text-left" onsubmit="event.preventDefault(); alert('This is a static demo form.');">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-slate-400 mb-1">Name</label>
+                    <input type="text" id="name" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-colors">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-slate-400 mb-1">Email</label>
+                    <input type="email" id="email" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-colors">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-slate-400 mb-1">Message</label>
+                    <textarea id="message" rows="4" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-colors"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-teal-500 hover:bg-teal-600 text-slate-900 font-bold py-3 rounded-lg transition-colors">
+                    Send Message
+                </button>
+            </form>
+
+            <div class="mt-12 flex justify-center space-x-8">
+                <a href="#" class="text-slate-400 hover:text-teal-400 transition-colors text-2xl">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="text-slate-400 hover:text-white transition-colors text-2xl">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:contact@uzairmukhtar.com" class="text-slate-400 hover:text-teal-400 transition-colors text-2xl">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 py-8">
+        <div class="text-center text-slate-500 text-sm">
+            <p>&copy; 2026 Uzair Mukhtar. All rights reserved.</p>
+            <p class="mt-1 text-slate-600">Hosted on GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar blur effect strengthening on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
