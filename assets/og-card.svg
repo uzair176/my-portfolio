@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Uzair Mukhtar - Data Analyst</title>
+  <desc id="desc">Portfolio preview with an analytical trend line and contact information.</desc>
+  <rect width="1200" height="630" fill="#0b1017"/>
+  <g opacity=".14" stroke="#87939d">
+    <path d="M0 90h1200M0 180h1200M0 270h1200M0 360h1200M0 450h1200M0 540h1200"/>
+    <path d="M100 0v630M200 0v630M300 0v630M400 0v630M500 0v630M600 0v630M700 0v630M800 0v630M900 0v630M1000 0v630M1100 0v630"/>
+  </g>
+  <circle cx="92" cy="82" r="34" fill="#b8f500"/>
+  <text x="92" y="91" fill="#172000" font-family="Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">UM</text>
+  <text x="150" y="90" fill="#f4f1e8" font-family="Arial, sans-serif" font-size="26" font-weight="700">Uzair Mukhtar</text>
+  <text x="84" y="230" fill="#f4f1e8" font-family="Georgia, serif" font-size="78">Data that moves</text>
+  <text x="84" y="316" fill="#b8f500" font-family="Georgia, serif" font-size="78" font-style="italic">decisions forward.</text>
+  <text x="88" y="380" fill="#bbc3ca" font-family="Arial, sans-serif" font-size="25">Dashboards · Data pipelines · Decision-ready reporting</text>
+  <path d="M680 478c85-11 128-68 202-55s121-92 224-119" fill="none" stroke="#b8f500" stroke-linecap="round" stroke-width="8"/>
+  <g fill="#0b1017" stroke="#b8f500" stroke-width="6">
+    <circle cx="680" cy="478" r="9"/><circle cx="882" cy="423" r="9"/><circle cx="1106" cy="304" r="9"/>
+  </g>
+  <text x="88" y="560" fill="#87939d" font-family="Arial, sans-serif" font-size="21">Lahore, Pakistan · uzair176.github.io</text>
+</svg>
